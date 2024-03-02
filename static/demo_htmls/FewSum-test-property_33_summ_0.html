@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Chawanmushi is the only dish that acceptable</span>. The <span class='review-span highlight' data-aligned-summaries='0'>Katsu is too thinly sliced and dry</span>. <span class='review-span highlight' data-aligned-summaries='1'>The consistency of</span> <span class='review-span highlight' data-aligned-summaries='0 1'>the ramen is too soft</span> (taste is ok). I could barely find the Tako in the takoyaki. I am sorry to say that <span class='review-span highlight' data-aligned-summaries='4'>Musashi is still my go to for Japanese food</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>This place was absolutely amazing</span>!<span class='review-span highlight' data-aligned-summaries='1'>!</span> <span class='review-span highlight' data-aligned-summaries='0 1'>I had the tonkotsu miso ramen</span> <span class='review-span highlight' data-aligned-summaries='1'>and ended up finishing the whole thing</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The flavor was so good</span> and that egg... mmm! I can't wait to go back and try the rest of the menu. I am so happy I found this place!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>love the authenticity of this place</span>! <span class='review-span highlight' data-aligned-summaries='1'>takoyaki</span>, <span class='review-span highlight' data-aligned-summaries='1'>ramen</span>, <span class='review-span highlight' data-aligned-summaries='1'>gyoza so delicious</span> and flavor is spot-on. <span class='review-span highlight' data-aligned-summaries='2'>pricey but</span> <span class='review-span highlight' data-aligned-summaries='3'>the politeness</span> and <span class='review-span highlight' data-aligned-summaries='3'>friendliness of the staff outshines</span>. i have taken friends here to eat and they love it, family loves it too. <span class='review-span highlight' data-aligned-summaries='2'>portion is large</span>, you will go home very full and happy.</div><div class='text-box'>I've never had <span class='review-span highlight' data-aligned-summaries='0 1'>real Ramen</span> before and now I can't live without it. <span class='review-span highlight' data-aligned-summaries='0 1 4'>There isn't anything on the menu that is bad</span> <span class='review-span highlight' data-aligned-summaries='0'>(</span>except the tea but you don't go there for the tea). I would drink the broth by the gallon if I could. I can't go a few days without going back.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Love this place</span>!!! <span class='review-span highlight' data-aligned-summaries='1'>I had the coconut Thia ramen and my whole table tried to steal it from me</span>-so good. My daughter got the curry chicken cutlet- yummy. I would ask for the curry on the side because this portion has more that enough for left overs and you don't want it to be soggy.</div><div class='text-box'>My husband and I are so happy that Yume has opened near our home! The <span class='review-span highlight' data-aligned-summaries='1'>20 hour pork broth used on the ramen</span> is the ultimate comfort food. <span class='review-span highlight' data-aligned-summaries='4'>This restaurant is fabulous</span>. We are looking forward to trying other dishes. <span class='review-span highlight' data-aligned-summaries='4'>The restaurant</span> and the very friendly and helpful owners <span class='review-span highlight' data-aligned-summaries='4'>exceeded our expectations</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Best ramen in NC</span>. Took a two hour drive from Raleigh to try this place. Owner is from SF and worked at SF Japan town ramen place before. <span class='review-span highlight' data-aligned-summaries='0 1'>The soup base is the real stuff</span>,<span class='review-span highlight' data-aligned-summaries='1'></span> <span class='review-span highlight' data-aligned-summaries='0 1'>not fake powders</span> like other places. <span class='review-span highlight' data-aligned-summaries='4'>Will come back again for sure</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Awesome ramen</span>. We <span class='review-span highlight' data-aligned-summaries='1'>tried the Shio</span> ramen and <span class='review-span highlight' data-aligned-summaries='1'>miso ramen</span>; both were <span class='review-span highlight' data-aligned-summaries='1'>made very well</span>. Agedashii tofu and pork curry bowls were equally tasty. <span class='review-span highlight' data-aligned-summaries='2'>Prices are not cheap</span> but aren't outrageous either. We met the <span class='review-span highlight' data-aligned-summaries='3'>owners</span>, they're <span class='review-span highlight' data-aligned-summaries='3'>a</span> very <span class='review-span highlight' data-aligned-summaries='3'>nice couple</span>. We'll definitely be back.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This has authentic Japanese dishes with amazing flavors.</span> <span id="1" class="summary-sentence">There are a variety of dishes like real ramen soups that are made well and taste delicious.</span> <span id="2" class="summary-sentence">The dishes are pricey but the portions are large so it's worth it.</span> <span id="3" class="summary-sentence">The staff is also friendly and polite.</span> <span id="4" class="summary-sentence">Overall, a great place to eat.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

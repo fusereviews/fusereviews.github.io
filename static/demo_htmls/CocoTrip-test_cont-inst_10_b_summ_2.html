@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I stayed in one of the loft suites in Fullerton Hotel Singapore. <span class='review-span highlight' data-aligned-summaries='7'>It looks majestic on the exterior</span> and many couples love to take their wedding photos there. <span class='review-span highlight' data-aligned-summaries='1 5'>The room is not exceptionally big</span> compared to other suites in Singapore. One has to climb up the stairs to use the restroom which is on the upper level, where the bed is too. I guess that is the only inconvenient part. My husband and I ended up spending most of our time on the upper level as the TV is there too. <span class='review-span highlight' data-aligned-summaries='6'>The food there during tea is not really that fantastic</span>, but they offer free flow of champange. Serivce is really good, as the staff responded really fast.</div><div class='text-box'>The Hotel is the former main post office building and has a huge atrium, with rooms running on the outside of the site. <span class='review-span highlight' data-aligned-summaries='3'>The location is fantastic</span>, with subway entrance 50 yards away (important in Singapore where taxis can be a nightmare) and <span class='review-span highlight' data-aligned-summaries='4'>all the key businesses down the street</span>. Staff very helpful, but as with nearly all five star Asian hotels, they try to compensate real "know how" with sheer numbers. Check out can be a problem as, again infuriatingly and in common with similar standard hotels in Asia, you have to have your credit card imprint taken again. Well worth staying and you will not in better in Singapore.</div><div class='text-box'>I have stayed at the Fullerton Hotel on 4 seperate occasions and it always meets my expectations. <span class='review-span highlight' data-aligned-summaries='1 5'>The rooms are good</span> <span class='review-span highlight' data-aligned-summaries='1'>and the lobby is grand</span>. The staff are wonderful and I enjoy staying here. It is my first choice in Singapore. <span class='review-span highlight' data-aligned-summaries='4'>It is</span> <span class='review-span highlight' data-aligned-summaries='3 4'>one of the few hotels right in the financial district and is an excellent base</span>. <span class='review-span highlight' data-aligned-summaries='8'>A lap around Marina Bay in the morning is a great way to start the day</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 7'>The outside of the Fullerton hotel is stunning</span> (and even more at night) and <span class='review-span highlight' data-aligned-summaries='7'>on the inside</span>, <span class='review-span highlight' data-aligned-summaries='1'>from the lobby to the rooms it will just blow your mind</span>. Its <span class='review-span highlight' data-aligned-summaries='3'>very</span> <span class='review-span highlight' data-aligned-summaries='3 4'>well located</span>, and from <span class='review-span highlight' data-aligned-summaries='4'>walking distance from the great MRT system</span>. <span class='review-span highlight' data-aligned-summaries='5'>The rooms are large enough</span> and extremely comfortable, there is a good variety of restaurants (I seriously recommend the Jade) and great staff.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3 4'>The hotel is conveniently located in the business centre</span> of Singapore. It has good internet connectivity from all over the hotel with good speed. Unfortunately <span class='review-span highlight' data-aligned-summaries='6'>what let it down is the food is very blunt</span>, as already mentioned by some other visitors.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 5 6'>loved the</span> <span class='review-span highlight' data-aligned-summaries='6'>breakfast buffet</span> and <span class='review-span highlight' data-aligned-summaries='1 5'>rooms</span>, disliked the taxi queues - a real drag waiting. The Swimming pool could do with being better attended when people are there - service was really slow and expensive!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 3 5'>Stunning</span> service, <span class='review-span highlight' data-aligned-summaries='3'>location</span>, <span class='review-span highlight' data-aligned-summaries='1 5'>rooms</span>, smiles, cleanliness and old world charm. You will be surprised and charmed at every turn.</div><div class='text-box'>Clean environment, efficient and kind personnel, <span class='review-span highlight' data-aligned-summaries='6'>gourmet cousine</span>. <span class='review-span highlight' data-aligned-summaries='2'>Quite cheap compared with what you get</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">From the outside the hotel is beautiful.</span> <span id="1" class="summary-sentence">Inside the lobby and the rooms are great.</span> <span id="2" class="summary-sentence">Overall it is cheap for all you get.</span> <span id="3" class="summary-sentence">The location of this hotel is excellent, as it is central to the financial district.</span> <span id="4" class="summary-sentence">It is one of very few hotels in this area, so it is an excellent base for those needing to be in close proximity to the business centre.</span> <span id="5" class="summary-sentence">The rooms aren't exceptionally big but they are good enough.</span> <span id="6" class="summary-sentence">The food at this hotel is mediocre and quite bland.</span> <span id="7" class="summary-sentence">The decor used for this hotel on both the indoor and outdoor is beautiful, and really stands out.</span> <span id="8" class="summary-sentence">Marina Bay is also walking distance away and is a great way to start the day.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

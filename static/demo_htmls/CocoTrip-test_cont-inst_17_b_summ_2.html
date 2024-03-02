@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I feel the hotel is slightly overrated. <span class='review-span highlight' data-aligned-summaries='1'>The setting is fine,</span> <span class='review-span highlight' data-aligned-summaries='1 8'>and there are lovely orange trees in the nice court yards</span> of the smallish complex. <span class='review-span highlight' data-aligned-summaries='5'>However the rooms are noisy with tilen floors and banging doors</span>. The room window gives unto the open tilen pathway leading past the doors. <span class='review-span highlight' data-aligned-summaries='7'>Breakfast is ok but basic</span>. There is free internet available amidst the breakfast tables. <span class='review-span highlight' data-aligned-summaries='6'>Staff seems a little scarce</span>, with the couple serving breakfast later in the day cleaning the rooms. What is missing however is the loving hand. For instance all flowers are made of plastic, even the azaleas and cyclamen outside in the garden. <span class='review-span highlight' data-aligned-summaries='0 1'>The personal touch somehow seems missing</span>, and that really is a pity.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 2'>Hotel Santa Maria is</span> <span class='review-span highlight' data-aligned-summaries='1'>a delightful, cheery & quiet place to stay</span>, <span class='review-span highlight' data-aligned-summaries='2'>tucked away in a small street in Trastevere</span>, Antonio (manager) is molto simpatico - friendly and very helpful. The hotel is not a fancy place, but quite comfy enough, with a <span class='review-span highlight' data-aligned-summaries='7'>good breakfast buffet</span>, which <span class='review-span highlight' data-aligned-summaries='8'>you can eat in the lovely courtyard full of orange trees</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>The colorful neighborhood is great for</span> walking around, <span class='review-span highlight' data-aligned-summaries='2 3'>lots of</span> <span class='review-span highlight' data-aligned-summaries='3'>shops</span> & <span class='review-span highlight' data-aligned-summaries='2'>outdoor restaurants</span> that stay open late. You can easily walk to other sites in the city, though we mostly took cabs to centro to save time.</div><div class='text-box'>I found this area of Rome to be very special and <span class='review-span highlight' data-aligned-summaries='0'>the Hotel</span> Santa Maria <span class='review-span highlight' data-aligned-summaries='0'>was more than I had expected</span>. I enjoyed the peace and serentity with the safety gates, <span class='review-span highlight' data-aligned-summaries='7'>beautiful</span> <span class='review-span highlight' data-aligned-summaries='7 8'>breakfast</span> which <span class='review-span highlight' data-aligned-summaries='8'>could be taken</span> either <span class='review-span highlight' data-aligned-summaries='8'>in the</span> eating area or <span class='review-span highlight' data-aligned-summaries='8'>courtyard</span> and a nice wine bar with appetizers. The rooms were clean and well maintained. Personnel were outstanding to work with. <span class='review-span highlight' data-aligned-summaries='2'>The Trastevere area is near all of the major attractions and yet, it is magical to stroll through a maze of fascinating medieval streets with some of the best restaurants in Rome</span>.</div><div class='text-box'>Wonderful place to stay! <span class='review-span highlight' data-aligned-summaries='1'>An intimate, cozy place</span>-<span class='review-span highlight' data-aligned-summaries='8'>loved the orange-tree courtyard</span>. Front desk personnel was most helpful. Cleaning/cooking staff wonderful-very clean rooms. <span class='review-span highlight' data-aligned-summaries='7'>Breakfasts very filling and tasty-the scrambled eggs and cappuccino were my favorites</span>. Neighborhood not touristy. <span class='review-span highlight' data-aligned-summaries='0'>15-minute walk to the Colosseum; 25 min. to St. Peter's.</span> They arranged driver for airport pickup and dropoff. <span class='review-span highlight' data-aligned-summaries='5 9'>Bells of neighboring Church could be sleep-disruptive</span> for light sleepers, but earplugs blocked the noise.</div><div class='text-box'>Accomodating people who are always pleasent. <span class='review-span highlight' data-aligned-summaries='7'>Good breakfast</span>. <span class='review-span highlight' data-aligned-summaries='2'>A block from Santa Maria Maggiore</span> and <span class='review-span highlight' data-aligned-summaries='2'>Ponte Sisto</span> but tucked away from all bustle. <span class='review-span highlight' data-aligned-summaries='0 2'>We walked to the center of Rome</span>, <span class='review-span highlight' data-aligned-summaries='2'>Campo Fiore</span>, <span class='review-span highlight' data-aligned-summaries='2'>Janiculum</span>, all over Trastevere. <span class='review-span highlight' data-aligned-summaries='3'>Close to #8 tram with connections to airport</span>, Tivoli and all of Rome. <span class='review-span highlight' data-aligned-summaries='4 8'>Private courtyard</span> through gated drive. A good refuge for tired feet and bodies. We would go back.</div><div class='text-box'>We stayed here for five nights. <span class='review-span highlight' data-aligned-summaries='0'>a great base for exploring Rome</span>; thank heavens we took a taxi - we'd never have found it by ourselves! <span class='review-span highlight' data-aligned-summaries='2'>Right in the middle of Trastevere, ideal for restaurants</span> etc. <span class='review-span highlight' data-aligned-summaries='4'>Nice</span> <span class='review-span highlight' data-aligned-summaries='4 5'>room</span>, <span class='review-span highlight' data-aligned-summaries='5'>pity next doors plumbing is so noisy though</span>, otherwise very peaceful. Very nice staff - would stay here again.</div><div class='text-box'>Spent 4 restful nights at <span class='review-span highlight' data-aligned-summaries='2'>a lovely oasis</span> of calm <span class='review-span highlight' data-aligned-summaries='2'>in Trastevere</span>. Very well looked after, nothing was too much trouble. Very <span class='review-span highlight' data-aligned-summaries='0'>convenient for all parts of Rome</span> and <span class='review-span highlight' data-aligned-summaries='0'>Vatican</span>. <span class='review-span highlight' data-aligned-summaries='4'>Lovely</span> that <span class='review-span highlight' data-aligned-summaries='1 4 8'>rooms opened</span> <span class='review-span highlight' data-aligned-summaries='4 8'>out</span> <span class='review-span highlight' data-aligned-summaries='1 4 8'>into</span> <span class='review-span highlight' data-aligned-summaries='4 8'>open air of</span> <span class='review-span highlight' data-aligned-summaries='1 4 8'>courtyards</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>This was a charming</span>, albeit somewhat pricey, <span class='review-span highlight' data-aligned-summaries='0 1'>refuge</span> from the overload of Rome. The employees were wonderful and the setting very peaceful. <span class='review-span highlight' data-aligned-summaries='0'>The location was also very handy</span>, and I would definitely stay here again.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is a very nice and convenient base to explore Rome and the Vatican from but lacks a personal touch.</span> <span id="1" class="summary-sentence">It is cozy and charming but maybe overrated a little.</span> <span id="2" class="summary-sentence">This hotel is ideal for restaurants and in the middle of Trastevere and is only a block away from Santa Maria Maggiore and Ponte Sisto and within walking distance of the center of Rome, Campo Fiore and Janiculum.</span> <span id="3" class="summary-sentence">It is also not far from the tram with connections to the airport and there are lots of shops and beautiful colorful neighborhoods all around.</span> <span id="4" class="summary-sentence">The rooms are lovely in that there is the option for them to be opened out into the open air with the courtyards.</span> <span id="5" class="summary-sentence">However, the rooms can be become rather noisy due to the tilen floors and the doors that bang.</span> <span id="6" class="summary-sentence">There were not many staff here.</span> <span id="7" class="summary-sentence">Generally a very good buffet breakfast that offers scrambled eggs and cappuccino amongst other things.</span> <span id="8" class="summary-sentence">There is also access to the lovely courtyard that is covered in orange trees for when you want to eat your breakfast.</span> <span id="9" class="summary-sentence">The bells from the nearby church could cause sleep issues.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>
